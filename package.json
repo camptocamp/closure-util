@@ -1,6 +1,6 @@
 {
   "name": "closure-util",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "description": "Utilities for Closure Library based projects.",
   "main": "lib/index.js",
   "homepage": "https://github.com/openlayers/closure-util",
@@ -13,9 +13,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "acorn": "4.0.11",
-    "async": "2.1.5",
-    "fs-extra": "2.0.0",
+    "acorn": "5.0.3",
+    "async": "2.3.0",
+    "fs-extra": "2.1.2",
     "gaze": "1.1.2",
     "get-down": "1.1.0",
     "glob": "7.1.1",
@@ -27,13 +27,13 @@
     "nomnom": "1.8.1",
     "npmlog": "4.0.2",
     "rimraf": "2.6.1",
-    "send": "0.14.2",
+    "send": "0.15.0",
     "socket.io": "1.7.3",
     "temp": "0.8.3"
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "eslint": "3.16.1",
+    "eslint": "3.19.0",
     "eslint-config-openlayers": "7.0.0",
     "mocha": "3.2.0",
     "supertest": "3.0.0"
