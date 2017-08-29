@@ -1,15 +1,15 @@
 {
-  "name": "closure-util",
+  "name": "@camptocamp/closure-util",
   "version": "1.23.0",
-  "description": "Utilities for Closure Library based projects.",
+  "description": "Utilities for Closure Library based projects. Camptocamp fork with support for goog.module.",
   "main": "lib/index.js",
-  "homepage": "https://github.com/openlayers/closure-util",
+  "homepage": "https://github.com/camptocamp/closure-util",
   "repository": {
     "type": "git",
-    "url": "git://github.com/openlayers/closure-util.git"
+    "url": "git://github.com/camptocamp/closure-util.git"
   },
   "bugs": {
-    "url": "https://github.com/openlayers/closure-util/issues"
+    "url": "https://github.com/camptocamp/closure-util/issues"
   },
   "license": "MIT",
   "dependencies": {
