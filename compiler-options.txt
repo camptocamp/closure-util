@@ -23,15 +23,18 @@ Basic Usage:
  --language_in VAL                      : Sets what language spec that input
                                           sources conform. Options:
                                           ECMASCRIPT3, ECMASCRIPT5,
-                                          ECMASCRIPT5_STRICT, ECMASCRIPT6
-                                          (default), ECMASCRIPT6_STRICT,
-                                          ECMASCRIPT6_TYPED (experimental)
-                                          (default: ECMASCRIPT6)
+                                          ECMASCRIPT5_STRICT, ECMASCRIPT6_TYPED
+                                          (experimental), ECMASCRIPT_2015,
+                                          ECMASCRIPT_2016, ECMASCRIPT_2017,
+                                          ECMASCRIPT_NEXT (default:
+                                          ECMASCRIPT_2017)
  --language_out VAL                     : Sets what language spec the output
                                           should conform to. Options:
-                                          ECMASCRIPT3 (default), ECMASCRIPT5,
+                                          ECMASCRIPT3, ECMASCRIPT5,
                                           ECMASCRIPT5_STRICT, ECMASCRIPT6_TYPED
-                                          (experimental) (default: ECMASCRIPT3)
+                                          (experimental), ECMASCRIPT_2015,
+                                          ECMASCRIPT_2016, ECMASCRIPT_2017,
+                                          ECMASCRIPT_NEXT (default: ECMASCRIPT5)
  --warning_level (-W) [QUIET | DEFAULT  : Specifies the warning level to use.
  | VERBOSE]                               Options: QUIET, DEFAULT, VERBOSE
                                           (default: DEFAULT)
@@ -60,6 +63,8 @@ Warning and Error Management:
  --new_type_inf                         : Checks for type errors using the new
                                           type inference algorithm. (default:
                                           false)
+ --strict_mode_input                    : Assume input sources are to run in
+                                          strict mode. (default: true)
  --warnings_whitelist_file VAL          : A file containing warnings to
                                           suppress. Each line should be of the
                                           form
@@ -67,17 +72,17 @@ Warning and Error Management:
                                           <warning-description> (default: )
 
 Available Error Groups: accessControls, ambiguousFunctionDecl,
-    checkEventfulObjectDisposal, checkRegExp, checkTypes, checkVars,
-    commonJsModuleLoad, conformanceViolations, const, constantProperty,
-    deprecated, deprecatedAnnotations, duplicateMessage, es3, es5Strict,
-    externsValidation, fileoverviewTags, functionParams, globalThis,
-    internetExplorerChecks, invalidCasts, misplacedTypeAnnotation,
-    missingGetCssName, missingOverride, missingPolyfill, missingProperties,
-    missingProvide, missingRequire, missingReturn, msgDescriptions,
-    newCheckTypes, nonStandardJsDocs, missingSourcesWarnings,
-    reportUnknownTypes, suspiciousCode, strictModuleDepCheck, typeInvalidation,
-    undefinedNames, undefinedVars, unknownDefines, unusedLocalVariables,
-    unusedPrivateMembers, uselessCode, useOfGoogBase, underscore, visibility
+    checkRegExp, checkTypes, checkVars, commonJsModuleLoad,
+    conformanceViolations, const, constantProperty, deprecated,
+    deprecatedAnnotations, duplicateMessage, es3, es5Strict, externsValidation,
+    fileoverviewTags, functionParams, globalThis, internetExplorerChecks,
+    invalidCasts, misplacedTypeAnnotation, missingGetCssName, missingOverride,
+    missingPolyfill, missingProperties, missingProvide, missingRequire,
+    missingReturn, msgDescriptions, newCheckTypes, nonStandardJsDocs,
+    missingSourcesWarnings, reportUnknownTypes, suspiciousCode,
+    strictModuleDepCheck, typeInvalidation, undefinedNames, undefinedVars,
+    unknownDefines, unusedLocalVariables, unusedPrivateMembers, uselessCode,
+    useOfGoogBase, underscore, visibility
 
 Output:
  --assume_function_wrapper              : Enable additional optimizations based
@@ -148,14 +153,19 @@ Dependency Management:
 JS Modules:
  --js_module_root VAL                   : Path prefixes to be removed from ES6
                                           & CommonJS modules.
- --module_resolution [BROWSER | LEGACY  : Specifies how the compiler locates
- | NODE]                                  modules. BROWSER requires all module
+ --module_resolution [BROWSER | NODE]   : Specifies how the compiler locates
+                                          modules. BROWSER requires all module
                                           imports to begin with a '.' or '/'
                                           and have a file extension. NODE uses
-                                          the node module rules. LEGACY
-                                          prepends a '/' to any import not
-                                          already beginning with a '.' or '/'.
-                                          (default: LEGACY)
+                                          the node module rules. (default:
+                                          BROWSER)
+ --package_json_entry_names VAL         : Ordered list of entries to look for
+                                          in package.json files when processing
+                                          modules with the NODE module
+                                          resolution strategy (i.e.
+                                          esnext:main,browser,main). Defaults
+                                          to a list with the following entries:
+                                          "browser", "module", "main".
  --process_common_js_modules            : Process CommonJS modules to a
                                           concatenable form. (default: false)
  --transform_amd_modules                : Transform AMD to CommonJS modules.
