@@ -1,6 +1,6 @@
 {
   "name": "@camptocamp/closure-util",
-  "version": "1.24.0",
+  "version": "1.24.1",
   "description": "Utilities for Closure Library based projects. Camptocamp fork with support for goog.module.",
   "main": "lib/index.js",
   "homepage": "https://github.com/camptocamp/closure-util",
@@ -20,20 +20,20 @@
     "get-down": "1.2.0",
     "glob": "7.1.2",
     "graceful-fs": "4.1.11",
-    "handlebars": "4.0.10",
+    "handlebars": "4.0.11",
     "lodash": "4.17.4",
     "minimatch": "3.0.4",
     "mkdirp": "0.5.1",
     "nomnom": "1.8.1",
     "npmlog": "4.1.2",
     "rimraf": "2.6.2",
-    "send": "0.15.4",
-    "socket.io": "2.0.1",
+    "send": "0.16.1",
+    "socket.io": "2.0.4",
     "temp": "0.8.3"
   },
   "devDependencies": {
     "chai": "4.1.2",
-    "eslint": "3.19.0",
+    "eslint": "4.9.0",
     "eslint-config-openlayers": "7.0.0",
     "mocha": "3.5.3",
     "supertest": "3.0.0"
