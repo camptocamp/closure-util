@@ -242,12 +242,12 @@ describe('manager', function() {
         manager.on('error', done);
         manager.on('ready', function() {
           var dependencies = manager.getDependencies(
-              path.join(fixtures, 'dependencies-goog.module', 'main-car.js'));
+            path.join(fixtures, 'dependencies-goog.module', 'main-car.js'));
           var paths = dependencies.map(function(s) {
             return path.basename(s.path);
           });
           assert.deepEqual(paths,
-              ['base.js', 'fuel.js', 'vehicle.js', 'car.js', 'main-car.js']);
+            ['base.js', 'fuel.js', 'vehicle.js', 'car.js', 'main-car.js']);
           done();
         });
       });
@@ -262,12 +262,12 @@ describe('manager', function() {
         manager.on('error', done);
         manager.on('ready', function() {
           var dependencies = manager.getDependencies(
-              path.join(fixtures, 'dependencies-goog.module', 'main-boat.js'));
+            path.join(fixtures, 'dependencies-goog.module', 'main-boat.js'));
           var paths = dependencies.map(function(s) {
             return path.basename(s.path);
           });
           assert.deepEqual(paths,
-              ['base.js', 'fuel.js', 'vehicle.js', 'vehicle2.js', 'vehicle3.js', 'boat.js', 'main-boat.js']);
+            ['base.js', 'fuel.js', 'vehicle.js', 'vehicle2.js', 'vehicle3.js', 'boat.js', 'main-boat.js']);
           done();
         });
       });
