@@ -1,6 +1,6 @@
 {
   "name": "@camptocamp/closure-util",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "description": "Utilities for Closure Library based projects. Camptocamp fork with support for goog.module.",
   "main": "lib/index.js",
   "homepage": "https://github.com/camptocamp/closure-util",
@@ -13,8 +13,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "acorn": "5.1.2",
-    "async": "2.5.0",
+    "acorn": "5.2.1",
+    "async": "2.6.0",
     "fs-extra": "4.0.2",
     "gaze": "1.1.2",
     "get-down": "1.2.0",
@@ -33,21 +33,24 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
-    "eslint": "4.9.0",
+    "eslint": "4.11.0",
     "eslint-config-openlayers": "7.0.0",
-    "mocha": "3.5.3",
+    "mocha": "4.0.1",
     "supertest": "3.0.0"
   },
   "scripts": {
     "postinstall": "node ./bin/closure-util.js update",
     "pretest": "eslint bin lib test --ignore-pattern test/fixtures/errors/**/*.js",
-    "test": "mocha test/spec",
+    "test": "mocha --exit test/spec",
     "start": "npm test -- --watch"
   },
   "bin": {
     "closure-util": "./bin/closure-util.js"
   },
   "eslintConfig": {
-    "extends": ["openlayers", ".eslintrc-es6.yaml"]
+    "extends": [
+      "openlayers",
+      ".eslintrc-es6.yaml"
+    ]
   }
 }
