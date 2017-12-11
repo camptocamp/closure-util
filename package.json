@@ -1,6 +1,6 @@
 {
   "name": "@camptocamp/closure-util",
-  "version": "1.26.0",
+  "version": "1.27.0",
   "description": "Utilities for Closure Library based projects. Camptocamp fork with support for goog.module.",
   "main": "lib/index.js",
   "homepage": "https://github.com/camptocamp/closure-util",
