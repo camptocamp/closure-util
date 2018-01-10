@@ -3,8 +3,8 @@
 
 Utilities for working with Closure Library projects.
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/openlayers/closure-util.svg)](https://greenkeeper.io/)
-[![Current Status](https://secure.travis-ci.org/openlayers/closure-util.png?branch=master)](https://travis-ci.org/openlayers/closure-util)
+[![Greenkeeper badge](https://badges.greenkeeper.io/camptocamp/closure-util.svg)](https://greenkeeper.io/)
+[![Current Status](https://secure.travis-ci.org/camptocamp/closure-util.png?branch=master)](https://travis-ci.org/camptocamp/closure-util)
 
 ## API
 
@@ -125,11 +125,11 @@ Run tests continuously during development:
 
 To publish a new version of the `closure-util` package, first create a tag, and then publish.  Creating a tag can be done with the [`npm version` command](https://www.npmjs.org/doc/cli/npm-version.html).  This is a handy way to update `package.json` and create a git tag named like the new version.  The [`npm publish` command](https://www.npmjs.org/doc/cli/npm-publish.html) is used to publish the package to the [registry](https://www.npmjs.org/package/closure-util).
 
-Example of publishing a new minor version (to increment the major version or create a patch release, replace `minor` with `major` or `patch`).  This assumes you have the latest from [`master`](https://github.com/openlayers/closure-util/tree/master) and your remote is named `openlayers`.
+Example of publishing a new minor version (to increment the major version or create a patch release, replace `minor` with `major` or `patch`).  This assumes you have the latest from [`master`](https://github.com/camptocamp/closure-util/tree/master) and your remote is named `origin`.
 
 ```bash
 npm version minor
-git push --tags openlayers master && npm publish
+git push --tags origin master && npm publish
 ```
 
 To publish a new version, you need to have [signed up](https://www.npmjs.org/signup) for an account with the registry.  After signing up for an account, contact one of the current `closure-util` maintainers and ask to be added (with [`npm owner`](https://www.npmjs.org/doc/cli/npm-owner.html)).
