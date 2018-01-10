@@ -46,6 +46,8 @@ Warning and Error Management:
  --conformance_configs VAL              : A list of JS Conformance
                                           configurations in text protocol
                                           buffer format.
+ --error_format [STANDARD | JSON]       : Specifies format for error messages.
+                                          (default: STANDARD)
  --extra_annotation_name VAL            : A whitelist of tag names in JSDoc.
                                           You may specify multiple
  --hide_warnings_for VAL                : If specified, files whose path
