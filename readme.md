@@ -79,7 +79,7 @@ The `closure-util` package downloads the Closure Compiler and Closure Library wh
 
 Available configuration options (see `default-config.json` for default values):
 
- * `compiler_url` - URL for the compiler zip archive (e.g. `http://dl.google.com/closure-compiler/compiler-latest.zip`).
+ * `compiler_url` - URL for the compiler zip archive (e.g. `https://dl.google.com/closure-compiler/compiler-latest.zip`).
  * `library_url` - URL for the Closure Library zip archive (e.g. `https://github.com/google/closure-library/archive/master.zip`).
 
 ## CLI
